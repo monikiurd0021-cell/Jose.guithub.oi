@@ -4,22 +4,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
   <title>Fone Bluetooth Premium</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
   <style>
-
     *{
       margin:0;
       padding:0;
       box-sizing:border-box;
       font-family:'Poppins',sans-serif;
-    }
-
-    html{
-      scroll-behavior:smooth;
     }
 
     body{
@@ -40,9 +34,7 @@
       align-items:center;
       justify-content:center;
       padding:40px 0;
-
-      background:
-      radial-gradient(circle at top,#1c1c1c 0%,#050505 70%);
+      background: radial-gradient(circle at top,#1c1c1c 0%,#050505 70%);
     }
 
     .hero{
@@ -70,11 +62,7 @@
     .premium-grid img{
       width:100%;
       border-radius:35px;
-
-      box-shadow:
-      0 0 40px rgba(0,0,0,0.7),
-      0 25px 70px rgba(0,0,0,0.8);
-
+      box-shadow:0 0 40px rgba(0,0,0,0.7),0 25px 70px rgba(0,0,0,0.8);
       transition:0.4s ease;
     }
 
@@ -85,51 +73,19 @@
 
     .btn{
       display:inline-block;
-
       padding:18px 35px;
-
       border-radius:50px;
-
-      background:
-      linear-gradient(90deg,#7b2ff7,#00c6ff);
-
+      background:linear-gradient(90deg,#7b2ff7,#00c6ff);
       color:#fff;
       text-decoration:none;
       font-size:1rem;
       font-weight:700;
-
+      box-shadow:0 10px 30px rgba(123,47,247,0.5);
       transition:0.3s;
-
-      box-shadow:
-      0 10px 30px rgba(123,47,247,0.5);
     }
 
     .btn:hover{
       transform:translateY(-3px) scale(1.03);
-    }
-
-    .floating-btn{
-      position:fixed;
-      right:20px;
-      bottom:20px;
-      z-index:999;
-
-      animation:pulse 2s infinite;
-    }
-
-    @keyframes pulse{
-
-      0%{
-        transform:scale(1);
-      }
-
-      50%{
-        transform:scale(1.05);
-      }
-
-      100%{
-        transform:scale(1);
-      }
     }
 
     section{
@@ -145,9 +101,7 @@
 
     .benefits{
       display:grid;
-      grid-template-columns:
-      repeat(auto-fit,minmax(250px,1fr));
-
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
       gap:25px;
     }
 
@@ -155,104 +109,36 @@
       background:#111;
       padding:35px;
       border-radius:25px;
-
-      border:
-      1px solid rgba(255,255,255,0.05);
-
+      border:1px solid rgba(255,255,255,0.05);
       transition:0.3s;
     }
 
     .card:hover{
       transform:translateY(-10px);
-
-      border-color:#7b2ff7;
-    }
-
-    .card h3{
-      font-size:1.5rem;
-      margin-bottom:15px;
-    }
-
-    .card p{
-      color:#c8c8c8;
-      line-height:1.8;
     }
 
     .premium-section{
-
-      background:
-      linear-gradient(to right,#0a0a0a,#111);
-
-      border-top:
-      1px solid rgba(255,255,255,0.05);
-
-      border-bottom:
-      1px solid rgba(255,255,255,0.05);
+      background:linear-gradient(to right,#0a0a0a,#111);
     }
 
     .premium-grid{
       display:grid;
       grid-template-columns:1fr 1fr;
-      align-items:center;
       gap:60px;
-    }
-
-    .premium-grid h2{
-      font-size:3rem;
-      margin-bottom:20px;
-    }
-
-    .premium-grid p{
-      color:#d5d5d5;
-      line-height:2;
-      margin-bottom:30px;
-    }
-
-    .reviews{
-      display:grid;
-      grid-template-columns:
-      repeat(auto-fit,minmax(280px,1fr));
-
-      gap:25px;
-    }
-
-    .review-card{
-      background:#111;
-      padding:30px;
-      border-radius:25px;
-    }
-
-    .review-card h4{
-      margin-top:15px;
-      font-size:1.1rem;
-    }
-
-    .stars{
-      color:#ffd700;
-      font-size:1.2rem;
-      margin-bottom:15px;
+      align-items:center;
     }
 
     .offer-box{
-      background:
-      linear-gradient(135deg,#7b2ff7,#00c6ff);
-
+      background:linear-gradient(135deg,#7b2ff7,#00c6ff);
       padding:60px 40px;
-
       border-radius:35px;
-
       text-align:center;
-    }
-
-    .offer-box h2{
-      font-size:3rem;
-      margin-bottom:20px;
     }
 
     .old-price{
       text-decoration:line-through;
-      opacity:0.8;
       font-size:2rem;
+      opacity:0.8;
     }
 
     .new-price{
@@ -261,24 +147,10 @@
       margin:20px 0;
     }
 
-    footer{
-      padding:40px 0;
-      text-align:center;
-      color:#999;
-
-      border-top:
-      1px solid rgba(255,255,255,0.05);
-    }
-
     @media(max-width:900px){
-
       .hero,
       .premium-grid{
         grid-template-columns:1fr;
-      }
-
-      .hero-text{
-        text-align:center;
       }
 
       .hero-text h1{
@@ -289,296 +161,129 @@
         font-size:2.3rem;
       }
 
-      .premium-grid h2{
-        font-size:2.2rem;
-      }
-
       .new-price{
         font-size:3.5rem;
       }
     }
-
   </style>
 </head>
 
 <body>
 
-  <!-- BOTÃO FLUTUANTE -->
-
-  <a
-  class="btn floating-btn"
-  href="https://pay.kaiross.com.br/iqE8DOFIg9wX"
-  target="_blank">
-
-  COMPRAR AGORA
-
-  </a>
-
-  <!-- HERO -->
-
   <header>
-
     <div class="container hero">
 
       <div class="hero-text">
+        <h1>O Fone Bluetooth Premium Que Está Viralizando No Brasil</h1>
 
-        <h1>
-          O Fone Bluetooth Premium
-          Que Está Viralizando
-          No Brasil
-        </h1>
+        <p>Som imersivo, conforto extremo e acabamento premium.</p>
 
-        <p>
-          Som imersivo, conforto extremo
-          e acabamento premium para quem
-          quer qualidade de verdade.
-        </p>
-
-        <a
-        class="btn"
-        href="https://pay.kaiross.com.br/iqE8DOFIg9wX"
-        target="_blank">
-
-        QUERO O MEU AGORA
-
+        <a class="btn" href="https://pay.kaiross.com.br/iqE8DOFIg9wX" target="_blank">
+          QUERO O MEU AGORA
         </a>
-
       </div>
 
       <div class="hero-image">
-
-        <!-- PRIMEIRA FOTO -->
-
-        <img
-        src="fone1.webp"
-        alt="Fone Bluetooth Premium">
-
+        <img src="imagem%201.png" alt="Fone Bluetooth">
       </div>
 
     </div>
-
   </header>
 
-  <!-- BENEFÍCIOS -->
-
   <section>
-
     <div class="container">
 
-      <h2 class="section-title">
-        Por Que Esse Fone Está Impressionando?
-      </h2>
+      <h2 class="section-title">Por Que Esse Fone Impressiona?</h2>
 
       <div class="benefits">
 
         <div class="card">
-
           <h3>🔊 Som Premium</h3>
-
-          <p>
-            Áudio potente e cristalino
-            para músicas, filmes e jogos.
-          </p>
-
+          <p>Áudio cristalino e potente.</p>
         </div>
 
         <div class="card">
-
-          <h3>🔋 Bateria Duradoura</h3>
-
-          <p>
-            Horas de uso contínuo sem
-            preocupação com carregamento.
-          </p>
-
+          <h3>🔋 Bateria Longa</h3>
+          <p>Horas de uso sem preocupação.</p>
         </div>
 
         <div class="card">
-
-          <h3>🎧 Conforto Extremo</h3>
-
-          <p>
-            Almofadas ultra macias para
-            máxima experiência.
-          </p>
-
+          <h3>🎧 Conforto Total</h3>
+          <p>Uso prolongado sem incômodo.</p>
         </div>
 
         <div class="card">
-
-          <h3>✨ Design Luxuoso</h3>
-
-          <p>
-            Visual sofisticado inspirado
-            nos modelos premium.
-          </p>
-
+          <h3>✨ Design Luxo</h3>
+          <p>Acabamento moderno premium.</p>
         </div>
 
       </div>
-
     </div>
-
   </section>
 
-  <!-- SEÇÃO PREMIUM -->
-
   <section class="premium-section">
-
     <div class="container premium-grid">
 
       <div>
-
-        <!-- SEGUNDA FOTO -->
-
-        <img
-        src="fone2.webp"
-        alt="Fone Premium">
-
+        <img src="imagem%202.png" alt="Fone Premium">
       </div>
 
       <div>
+        <h2>Tecnologia e Liberdade</h2>
+        <p>Bluetooth rápido e som de alta qualidade.</p>
 
-        <h2>
-          Tecnologia,
-          Elegância
-          e Liberdade.
-        </h2>
-
-        <p>
-          Aproveite chamadas mais nítidas,
-          conexão rápida via Bluetooth e
-          liberdade total sem fios.
-        </p>
-
-        <a
-        class="btn"
-        href="https://pay.kaiross.com.br/iqE8DOFIg9wX"
-        target="_blank">
-
-        APROVEITAR OFERTA
-
+        <a class="btn" href="https://pay.kaiross.com.br/iqE8DOFIg9wX" target="_blank">
+          APROVEITAR OFERTA
         </a>
-
       </div>
 
     </div>
-
   </section>
 
-  <!-- AVALIAÇÕES -->
-
   <section>
-
     <div class="container">
 
-      <h2 class="section-title">
-        O Que Estão Falando
-      </h2>
+      <h2 class="section-title">O Que Estão Falando</h2>
 
       <div class="reviews">
 
         <div class="review-card">
-
-          <div class="stars">
-            ★★★★★
-          </div>
-
-          <p>
-            “O acabamento parece
-            produto de luxo.”
-          </p>
-
+          <div class="stars">★★★★★</div>
+          <p>“Qualidade absurda!”</p>
           <h4>Marcos Silva</h4>
-
         </div>
 
         <div class="review-card">
-
-          <div class="stars">
-            ★★★★★
-          </div>
-
-          <p>
-            “Muito confortável e a
-            bateria dura bastante.”
-          </p>
-
+          <div class="stars">★★★★★</div>
+          <p>“Muito confortável.”</p>
           <h4>Amanda Costa</h4>
-
-        </div>
-
-        <div class="review-card">
-
-          <div class="stars">
-            ★★★★★
-          </div>
-
-          <p>
-            “Qualidade absurda pelo preço.”
-          </p>
-
-          <h4>Felipe Rocha</h4>
-
         </div>
 
       </div>
 
     </div>
-
   </section>
 
-  <!-- OFERTA -->
-
   <section>
-
     <div class="container">
 
       <div class="offer-box">
 
         <h2>OFERTA ESPECIAL</h2>
 
-        <div class="old-price">
-          De R$ 239,90
-        </div>
+        <div class="old-price">De R$ 239,90</div>
+        <div class="new-price">R$ 139,90</div>
 
-        <div class="new-price">
-          R$ 139,90
-        </div>
+        <p>Frete grátis para todo Brasil</p>
 
-        <p style="margin-bottom:30px;font-size:1.2rem;">
-
-          Frete grátis para todo o Brasil.
-
-        </p>
-
-        <a
-        class="btn"
-        style="background:#000;box-shadow:none;"
-        href="https://pay.kaiross.com.br/iqE8DOFIg9wX"
-        target="_blank">
-
-        COMPRAR COM DESCONTO
-
+        <a class="btn" style="background:#000;" href="https://pay.kaiross.com.br/iqE8DOFIg9wX">
+          COMPRAR AGORA
         </a>
 
       </div>
 
     </div>
-
   </section>
-
-  <!-- RODAPÉ -->
-
-  <footer>
-
-    <div class="container">
-
-      © 2026 - Todos os direitos reservados.
-
-    </div>
-
-  </footer>
 
 </body>
 </html>
