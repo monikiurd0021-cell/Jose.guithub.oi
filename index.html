@@ -1,103 +1,445 @@
+# index.html
+
+```html
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Transforme Sua Forma de Assistir TV</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
-<style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins, sans-serif}
-body{background:#0b0b0b;color:#fff}
-header{padding:80px 20px;text-align:center;background:linear-gradient(180deg,#000,#111)}
-header h1{font-size:42px;font-weight:800;margin-bottom:20px}
-header p{font-size:20px;color:#ccc;margin-bottom:30px}
-.btn{
-display:inline-block;
-padding:18px 40px;
-background:#00ff88;
-color:#000;
-font-weight:700;
-border-radius:8px;
-text-decoration:none;
-transition:.3s;
-}
-.btn:hover{transform:scale(1.05);background:#00cc6a}
-.section{padding:60px 20px;text-align:center}
-.section h2{font-size:32px;margin-bottom:20px}
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:30px;
-margin-top:40px;
-}
-.card{
-background:#161616;
-padding:30px;
-border-radius:10px;
-box-shadow:0 0 15px #000;
-}
-.card h3{margin-bottom:15px;color:#00ff88}
-footer{
-background:#000;
-padding:40px 20px;
-text-align:center;
-color:#777;
-font-size:14px;
-}
-img{
-max-width:100%;
-border-radius:10px;
-margin-top:30px;
-}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fone Bluetooth Premium</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Poppins',sans-serif;
+    }
+
+    body{
+      background:#050505;
+      color:#fff;
+      overflow-x:hidden;
+    }
+
+    html{
+      scroll-behavior:smooth;
+    }
+
+    .container{
+      width:90%;
+      max-width:1200px;
+      margin:auto;
+    }
+
+    header{
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      position:relative;
+      background:linear-gradient(to bottom,#000,#0a0a0a);
+      padding:40px 0;
+    }
+
+    .hero{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      align-items:center;
+      gap:50px;
+    }
+
+    .hero-text h1{
+      font-size:4rem;
+      line-height:1.1;
+      margin-bottom:20px;
+      font-weight:800;
+    }
+
+    .hero-text p{
+      font-size:1.2rem;
+      color:#cfcfcf;
+      margin-bottom:30px;
+      line-height:1.8;
+    }
+
+    .hero-image img{
+      width:100%;
+      border-radius:30px;
+      box-shadow:0 0 60px rgba(0,0,0,0.8);
+    }
+
+    .btn{
+      display:inline-block;
+      padding:18px 35px;
+      border-radius:50px;
+      background:linear-gradient(90deg,#7b2ff7,#00c6ff);
+      color:#fff;
+      text-decoration:none;
+      font-size:1rem;
+      font-weight:700;
+      transition:0.3s;
+      box-shadow:0 10px 30px rgba(123,47,247,0.5);
+    }
+
+    .btn:hover{
+      transform:translateY(-3px) scale(1.03);
+    }
+
+    .floating-btn{
+      position:fixed;
+      bottom:20px;
+      right:20px;
+      z-index:999;
+      animation:pulse 2s infinite;
+    }
+
+    @keyframes pulse{
+      0%{transform:scale(1)}
+      50%{transform:scale(1.05)}
+      100%{transform:scale(1)}
+    }
+
+    section{
+      padding:100px 0;
+    }
+
+    .section-title{
+      text-align:center;
+      font-size:3rem;
+      margin-bottom:60px;
+      font-weight:800;
+    }
+
+    .benefits{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:25px;
+    }
+
+    .card{
+      background:#111;
+      padding:35px;
+      border-radius:25px;
+      border:1px solid rgba(255,255,255,0.05);
+      transition:0.3s;
+    }
+
+    .card:hover{
+      transform:translateY(-10px);
+      border-color:#7b2ff7;
+    }
+
+    .card h3{
+      font-size:1.5rem;
+      margin-bottom:15px;
+    }
+
+    .card p{
+      color:#c8c8c8;
+      line-height:1.8;
+    }
+
+    .premium-section{
+      background:linear-gradient(to right,#0a0a0a,#111);
+      border-top:1px solid rgba(255,255,255,0.05);
+      border-bottom:1px solid rgba(255,255,255,0.05);
+    }
+
+    .premium-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:50px;
+      align-items:center;
+    }
+
+    .premium-grid img{
+      width:100%;
+      border-radius:30px;
+    }
+
+    .premium-grid h2{
+      font-size:3rem;
+      margin-bottom:20px;
+    }
+
+    .premium-grid p{
+      color:#d5d5d5;
+      line-height:2;
+      margin-bottom:30px;
+    }
+
+    .reviews{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:25px;
+    }
+
+    .review-card{
+      background:#111;
+      padding:30px;
+      border-radius:25px;
+    }
+
+    .review-card h4{
+      margin-top:15px;
+      font-size:1.1rem;
+    }
+
+    .stars{
+      color:#ffd700;
+      font-size:1.2rem;
+      margin-bottom:15px;
+    }
+
+    .offer-box{
+      background:linear-gradient(135deg,#7b2ff7,#00c6ff);
+      padding:60px 40px;
+      border-radius:35px;
+      text-align:center;
+      color:#fff;
+    }
+
+    .offer-box h2{
+      font-size:3rem;
+      margin-bottom:20px;
+    }
+
+    .old-price{
+      text-decoration:line-through;
+      opacity:0.7;
+      font-size:2rem;
+    }
+
+    .new-price{
+      font-size:5rem;
+      font-weight:800;
+      margin:20px 0;
+    }
+
+    footer{
+      padding:40px 0;
+      text-align:center;
+      color:#999;
+      border-top:1px solid rgba(255,255,255,0.05);
+    }
+
+    @media(max-width:900px){
+
+      .hero,
+      .premium-grid{
+        grid-template-columns:1fr;
+      }
+
+      .hero-text{
+        text-align:center;
+      }
+
+      .hero-text h1{
+        font-size:2.7rem;
+      }
+
+      .section-title{
+        font-size:2.3rem;
+      }
+
+      .premium-grid h2{
+        font-size:2.2rem;
+      }
+
+      .new-price{
+        font-size:3.5rem;
+      }
+    }
+  </style>
 </head>
 <body>
 
+<a class="btn floating-btn" href="https://pay.kaiross.com.br/iqE8DOFIg9wX" target="_blank">
+  COMPRAR AGORA
+</a>
+
 <header>
-<h1>Transforme Qualquer Parede em um Cinema 4K</h1>
-<p>Assista filmes, futebol, séries e muito mais em tela gigante direto da sua casa</p>
-<a class="btn" href="https://pay.kaiross.com.br/iqE8DOFIg9wX" target="_blank">QUERO O MEU AGORA</a>
-<img src="https://images.unsplash.com/photo-1593784991095-a205069470b6" alt="Projetor">
+  <div class="container hero">
+
+    <div class="hero-text">
+      <h1>O Fone Bluetooth Premium Que Está Impressionando Todo Mundo</h1>
+
+      <p>
+        Qualidade sonora absurda, conforto extremo e um visual premium que parece produto de luxo.
+        Escute suas músicas, vídeos e chamadas com máxima imersão.
+      </p>
+
+      <a class="btn" href="https://pay.kaiross.com.br/iqE8DOFIg9wX" target="_blank">
+        QUERO O MEU AGORA
+      </a>
+    </div>
+
+    <div class="hero-image">
+      <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=1200&auto=format&fit=crop" alt="Fone Bluetooth Premium">
+    </div>
+
+  </div>
 </header>
 
-<section class="section">
-<h2>Por que esse projetor está conquistando milhares de pessoas?</h2>
-<div class="grid">
-<div class="card">
-<h3>Imagem Ultra HD</h3>
-<p>Qualidade absurda de imagem, cores vivas e nitidez impressionante.</p>
-</div>
-<div class="card">
-<h3>Tela de até 150 Polegadas</h3>
-<p>Transforme sua sala em um verdadeiro cinema profissional.</p>
-</div>
-<div class="card">
-<h3>Conecta com Celular e Notebook</h3>
-<p>Espelhamento fácil, rápido e sem complicação.</p>
-</div>
-<div class="card">
-<h3>Som Potente Integrado</h3>
-<p>Áudio limpo e forte, sem precisar de caixas externas.</p>
-</div>
-</div>
+<section>
+  <div class="container">
+
+    <h2 class="section-title">Por Que Esse Fone Está Viralizando?</h2>
+
+    <div class="benefits">
+
+      <div class="card">
+        <h3>🔊 Som Premium</h3>
+        <p>
+          Grave potente, áudio limpo e experiência sonora imersiva para músicas, filmes e jogos.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>🔋 Bateria Duradoura</h3>
+        <p>
+          Use durante horas sem preocupação. Ideal para trabalho, academia e viagens.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>🎧 Conforto Extremo</h3>
+        <p>
+          Almofadas ultra macias para uso prolongado sem desconforto.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>✨ Design Luxuoso</h3>
+        <p>
+          Visual moderno e sofisticado inspirado nos modelos premium mais desejados do mercado.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
 </section>
 
-<section class="section" style="background:#111">
-<h2>Imagine assistir a Copa, Netflix e YouTube assim:</h2>
-<img src="https://images.unsplash.com/photo-1587829741301-dc798b83add3" alt="Cinema em casa">
-<a class="btn" href="https://pay.kaiross.com.br/iqE8DOFIg9wX" target="_blank">GARANTIR O DESCONTO</a>
+<section class="premium-section">
+  <div class="container premium-grid">
+
+    <div>
+      <img src="https://images.unsplash.com/photo-1546435770-a3e426bf472b?q=80&w=1200&auto=format&fit=crop" alt="Fone Premium">
+    </div>
+
+    <div>
+      <h2>Mais Tecnologia. Mais Estilo. Mais Liberdade.</h2>
+
+      <p>
+        Aproveite chamadas mais nítidas, conexão rápida via Bluetooth e liberdade total sem fios.
+        Um acessório indispensável para quem gosta de qualidade e elegância.
+      </p>
+
+      <a class="btn" href="https://pay.kaiross.com.br/iqE8DOFIg9wX" target="_blank">
+        APROVEITAR OFERTA
+      </a>
+    </div>
+
+  </div>
 </section>
 
-<section class="section">
-<h2>Oferta por tempo limitado</h2>
-<p style="margin-bottom:30px;color:#ccc">Estoque reduzido. Garanta agora antes que acabe.</p>
-<a class="btn" href="https://pay.kaiross.com.br/iqE8DOFIg9wX" target="_blank">COMPRAR AGORA</a>
+<section>
+  <div class="container">
+
+    <h2 class="section-title">O Que Estão Falando</h2>
+
+    <div class="reviews">
+
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p>
+          “Achei o acabamento muito premium. O som surpreendeu demais.”
+        </p>
+        <h4>Marcos Silva</h4>
+      </div>
+
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p>
+          “Confortável, bonito e a bateria dura muito. Melhor compra do mês.”
+        </p>
+        <h4>Amanda Costa</h4>
+      </div>
+
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p>
+          “Parece um produto muito mais caro. Valeu cada centavo.”
+        </p>
+        <h4>Felipe Rocha</h4>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<section>
+  <div class="container">
+
+    <div class="offer-box">
+
+      <h2>OFERTA ESPECIAL</h2>
+
+      <div class="old-price">De R$ 299,90</div>
+
+      <div class="new-price">R$ 149,90</div>
+
+      <p style="margin-bottom:30px;font-size:1.2rem;">
+        Aproveite essa condição especial antes que o estoque acabe.
+      </p>
+
+      <a class="btn" style="background:#000;box-shadow:none;" href="https://pay.kaiross.com.br/iqE8DOFIg9wX" target="_blank">
+        COMPRAR COM DESCONTO
+      </a>
+
+    </div>
+
+  </div>
 </section>
 
 <footer>
-<p>© 2026 Todos os direitos reservados</p>
-<p>Essa página é apenas informativa. O produto é vendido no site oficial.</p>
+  <div class="container">
+    © 2026 - Todos os direitos reservados.
+  </div>
 </footer>
 
 </body>
 </html>
+```
+
+# COMO PUBLICAR NO GITHUB
+
+1. Crie uma conta no GitHub
+2. Crie um novo repositório
+3. Clique em “Add File” → “Create New File”
+4. Nomeie o arquivo como:
+
+```txt
+index.html
+```
+
+5. Cole todo o código acima
+6. Clique em “Commit Changes”
+7. Vá em:
+
+```txt
+Settings → Pages
+```
+
+8. Em “Branch” selecione:
+
+```txt
+main
+```
+
+9. Clique em Save
+10. Seu site ficará online automaticamente.
