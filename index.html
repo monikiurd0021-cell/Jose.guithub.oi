@@ -1,13 +1,16 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
   <title>Fone Bluetooth Premium</title>
+
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
   <style>
+
     *{
       margin:0;
       padding:0;
@@ -15,14 +18,14 @@
       font-family:'Poppins',sans-serif;
     }
 
+    html{
+      scroll-behavior:smooth;
+    }
+
     body{
       background:#050505;
       color:#fff;
       overflow-x:hidden;
-    }
-
-    html{
-      scroll-behavior:smooth;
     }
 
     .container{
@@ -36,49 +39,69 @@
       display:flex;
       align-items:center;
       justify-content:center;
-      position:relative;
-      background:linear-gradient(to bottom,#000,#0a0a0a);
       padding:40px 0;
+
+      background:
+      radial-gradient(circle at top,#1c1c1c 0%,#050505 70%);
     }
 
     .hero{
       display:grid;
       grid-template-columns:1fr 1fr;
       align-items:center;
-      gap:50px;
+      gap:60px;
     }
 
     .hero-text h1{
       font-size:4rem;
       line-height:1.1;
-      margin-bottom:20px;
+      margin-bottom:25px;
       font-weight:800;
     }
 
     .hero-text p{
-      font-size:1.2rem;
-      color:#cfcfcf;
-      margin-bottom:30px;
+      font-size:1.15rem;
+      color:#d0d0d0;
       line-height:1.8;
+      margin-bottom:35px;
     }
 
-    .hero-image img{
+    .hero-image img,
+    .premium-grid img{
       width:100%;
-      border-radius:30px;
-      box-shadow:0 0 60px rgba(0,0,0,0.8);
+      border-radius:35px;
+
+      box-shadow:
+      0 0 40px rgba(0,0,0,0.7),
+      0 25px 70px rgba(0,0,0,0.8);
+
+      transition:0.4s ease;
+    }
+
+    .hero-image img:hover,
+    .premium-grid img:hover{
+      transform:scale(1.02);
     }
 
     .btn{
       display:inline-block;
+
       padding:18px 35px;
+
       border-radius:50px;
-      background:linear-gradient(90deg,#7b2ff7,#00c6ff);
+
+      background:
+      linear-gradient(90deg,#7b2ff7,#00c6ff);
+
       color:#fff;
       text-decoration:none;
       font-size:1rem;
       font-weight:700;
+
       transition:0.3s;
-      box-shadow:0 10px 30px rgba(123,47,247,0.5);
+
+      box-shadow:
+      0 10px 30px rgba(123,47,247,0.5);
     }
 
     .btn:hover{
@@ -87,16 +110,26 @@
 
     .floating-btn{
       position:fixed;
-      bottom:20px;
       right:20px;
+      bottom:20px;
       z-index:999;
+
       animation:pulse 2s infinite;
     }
 
     @keyframes pulse{
-      0%{transform:scale(1)}
-      50%{transform:scale(1.05)}
-      100%{transform:scale(1)}
+
+      0%{
+        transform:scale(1);
+      }
+
+      50%{
+        transform:scale(1.05);
+      }
+
+      100%{
+        transform:scale(1);
+      }
     }
 
     section{
@@ -112,7 +145,9 @@
 
     .benefits{
       display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      grid-template-columns:
+      repeat(auto-fit,minmax(250px,1fr));
+
       gap:25px;
     }
 
@@ -120,12 +155,16 @@
       background:#111;
       padding:35px;
       border-radius:25px;
-      border:1px solid rgba(255,255,255,0.05);
+
+      border:
+      1px solid rgba(255,255,255,0.05);
+
       transition:0.3s;
     }
 
     .card:hover{
       transform:translateY(-10px);
+
       border-color:#7b2ff7;
     }
 
@@ -140,21 +179,22 @@
     }
 
     .premium-section{
-      background:linear-gradient(to right,#0a0a0a,#111);
-      border-top:1px solid rgba(255,255,255,0.05);
-      border-bottom:1px solid rgba(255,255,255,0.05);
+
+      background:
+      linear-gradient(to right,#0a0a0a,#111);
+
+      border-top:
+      1px solid rgba(255,255,255,0.05);
+
+      border-bottom:
+      1px solid rgba(255,255,255,0.05);
     }
 
     .premium-grid{
       display:grid;
       grid-template-columns:1fr 1fr;
-      gap:50px;
       align-items:center;
-    }
-
-    .premium-grid img{
-      width:100%;
-      border-radius:30px;
+      gap:60px;
     }
 
     .premium-grid h2{
@@ -170,7 +210,9 @@
 
     .reviews{
       display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      grid-template-columns:
+      repeat(auto-fit,minmax(280px,1fr));
+
       gap:25px;
     }
 
@@ -192,11 +234,14 @@
     }
 
     .offer-box{
-      background:linear-gradient(135deg,#7b2ff7,#00c6ff);
+      background:
+      linear-gradient(135deg,#7b2ff7,#00c6ff);
+
       padding:60px 40px;
+
       border-radius:35px;
+
       text-align:center;
-      color:#fff;
     }
 
     .offer-box h2{
@@ -206,7 +251,7 @@
 
     .old-price{
       text-decoration:line-through;
-      opacity:0.7;
+      opacity:0.8;
       font-size:2rem;
     }
 
@@ -220,7 +265,9 @@
       padding:40px 0;
       text-align:center;
       color:#999;
-      border-top:1px solid rgba(255,255,255,0.05);
+
+      border-top:
+      1px solid rgba(255,255,255,0.05);
     }
 
     @media(max-width:900px){
@@ -250,166 +297,288 @@
         font-size:3.5rem;
       }
     }
+
   </style>
 </head>
+
 <body>
 
-<a class="btn floating-btn" href="https://pay.kaiross.com.br/iqE8DOFIg9wX" target="_blank">
+  <!-- BOTÃO FLUTUANTE -->
+
+  <a
+  class="btn floating-btn"
+  href="https://pay.kaiross.com.br/iqE8DOFIg9wX"
+  target="_blank">
+
   COMPRAR AGORA
-</a>
 
-<header>
-  <div class="container hero">
+  </a>
 
-    <div class="hero-text">
-      <h1>O Fone Bluetooth Premium Que Está Impressionando Todo Mundo</h1>
+  <!-- HERO -->
 
-      <p>
-        Qualidade sonora absurda, conforto extremo e um visual premium que parece produto de luxo.
-        Escute suas músicas, vídeos e chamadas com máxima imersão.
-      </p>
+  <header>
 
-      <a class="btn" href="https://pay.kaiross.com.br/iqE8DOFIg9wX" target="_blank">
+    <div class="container hero">
+
+      <div class="hero-text">
+
+        <h1>
+          O Fone Bluetooth Premium
+          Que Está Viralizando
+          No Brasil
+        </h1>
+
+        <p>
+          Som imersivo, conforto extremo
+          e acabamento premium para quem
+          quer qualidade de verdade.
+        </p>
+
+        <a
+        class="btn"
+        href="https://pay.kaiross.com.br/iqE8DOFIg9wX"
+        target="_blank">
+
         QUERO O MEU AGORA
-      </a>
-    </div>
 
-    <div class="hero-image">
-      <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=1200&auto=format&fit=crop" alt="Fone Bluetooth Premium">
-    </div>
+        </a>
 
-  </div>
-</header>
-
-<section>
-  <div class="container">
-
-    <h2 class="section-title">Por Que Esse Fone Está Viralizando?</h2>
-
-    <div class="benefits">
-
-      <div class="card">
-        <h3>🔊 Som Premium</h3>
-        <p>
-          Grave potente, áudio limpo e experiência sonora imersiva para músicas, filmes e jogos.
-        </p>
       </div>
 
-      <div class="card">
-        <h3>🔋 Bateria Duradoura</h3>
-        <p>
-          Use durante horas sem preocupação. Ideal para trabalho, academia e viagens.
-        </p>
-      </div>
+      <div class="hero-image">
 
-      <div class="card">
-        <h3>🎧 Conforto Extremo</h3>
-        <p>
-          Almofadas ultra macias para uso prolongado sem desconforto.
-        </p>
-      </div>
+        <!-- PRIMEIRA FOTO -->
 
-      <div class="card">
-        <h3>✨ Design Luxuoso</h3>
-        <p>
-          Visual moderno e sofisticado inspirado nos modelos premium mais desejados do mercado.
-        </p>
+        <img
+        src="fone1.webp"
+        alt="Fone Bluetooth Premium">
+
       </div>
 
     </div>
 
-  </div>
-</section>
+  </header>
 
-<section class="premium-section">
-  <div class="container premium-grid">
+  <!-- BENEFÍCIOS -->
 
-    <div>
-      <img src="https://images.unsplash.com/photo-1546435770-a3e426bf472b?q=80&w=1200&auto=format&fit=crop" alt="Fone Premium">
+  <section>
+
+    <div class="container">
+
+      <h2 class="section-title">
+        Por Que Esse Fone Está Impressionando?
+      </h2>
+
+      <div class="benefits">
+
+        <div class="card">
+
+          <h3>🔊 Som Premium</h3>
+
+          <p>
+            Áudio potente e cristalino
+            para músicas, filmes e jogos.
+          </p>
+
+        </div>
+
+        <div class="card">
+
+          <h3>🔋 Bateria Duradoura</h3>
+
+          <p>
+            Horas de uso contínuo sem
+            preocupação com carregamento.
+          </p>
+
+        </div>
+
+        <div class="card">
+
+          <h3>🎧 Conforto Extremo</h3>
+
+          <p>
+            Almofadas ultra macias para
+            máxima experiência.
+          </p>
+
+        </div>
+
+        <div class="card">
+
+          <h3>✨ Design Luxuoso</h3>
+
+          <p>
+            Visual sofisticado inspirado
+            nos modelos premium.
+          </p>
+
+        </div>
+
+      </div>
+
     </div>
 
-    <div>
-      <h2>Mais Tecnologia. Mais Estilo. Mais Liberdade.</h2>
+  </section>
 
-      <p>
-        Aproveite chamadas mais nítidas, conexão rápida via Bluetooth e liberdade total sem fios.
-        Um acessório indispensável para quem gosta de qualidade e elegância.
-      </p>
+  <!-- SEÇÃO PREMIUM -->
 
-      <a class="btn" href="https://pay.kaiross.com.br/iqE8DOFIg9wX" target="_blank">
+  <section class="premium-section">
+
+    <div class="container premium-grid">
+
+      <div>
+
+        <!-- SEGUNDA FOTO -->
+
+        <img
+        src="fone2.webp"
+        alt="Fone Premium">
+
+      </div>
+
+      <div>
+
+        <h2>
+          Tecnologia,
+          Elegância
+          e Liberdade.
+        </h2>
+
+        <p>
+          Aproveite chamadas mais nítidas,
+          conexão rápida via Bluetooth e
+          liberdade total sem fios.
+        </p>
+
+        <a
+        class="btn"
+        href="https://pay.kaiross.com.br/iqE8DOFIg9wX"
+        target="_blank">
+
         APROVEITAR OFERTA
-      </a>
-    </div>
 
-  </div>
-</section>
+        </a>
 
-<section>
-  <div class="container">
-
-    <h2 class="section-title">O Que Estão Falando</h2>
-
-    <div class="reviews">
-
-      <div class="review-card">
-        <div class="stars">★★★★★</div>
-        <p>
-          “Achei o acabamento muito premium. O som surpreendeu demais.”
-        </p>
-        <h4>Marcos Silva</h4>
-      </div>
-
-      <div class="review-card">
-        <div class="stars">★★★★★</div>
-        <p>
-          “Confortável, bonito e a bateria dura muito. Melhor compra do mês.”
-        </p>
-        <h4>Amanda Costa</h4>
-      </div>
-
-      <div class="review-card">
-        <div class="stars">★★★★★</div>
-        <p>
-          “Parece um produto muito mais caro. Valeu cada centavo.”
-        </p>
-        <h4>Felipe Rocha</h4>
       </div>
 
     </div>
 
-  </div>
-</section>
+  </section>
 
-<section>
-  <div class="container">
+  <!-- AVALIAÇÕES -->
 
-    <div class="offer-box">
+  <section>
 
-      <h2>OFERTA ESPECIAL</h2>
+    <div class="container">
 
-      <div class="old-price">De R$ 299,90</div>
+      <h2 class="section-title">
+        O Que Estão Falando
+      </h2>
 
-      <div class="new-price">R$ 149,90</div>
+      <div class="reviews">
 
-      <p style="margin-bottom:30px;font-size:1.2rem;">
-        Aproveite essa condição especial antes que o estoque acabe.
-      </p>
+        <div class="review-card">
 
-      <a class="btn" style="background:#000;box-shadow:none;" href="https://pay.kaiross.com.br/iqE8DOFIg9wX" target="_blank">
+          <div class="stars">
+            ★★★★★
+          </div>
+
+          <p>
+            “O acabamento parece
+            produto de luxo.”
+          </p>
+
+          <h4>Marcos Silva</h4>
+
+        </div>
+
+        <div class="review-card">
+
+          <div class="stars">
+            ★★★★★
+          </div>
+
+          <p>
+            “Muito confortável e a
+            bateria dura bastante.”
+          </p>
+
+          <h4>Amanda Costa</h4>
+
+        </div>
+
+        <div class="review-card">
+
+          <div class="stars">
+            ★★★★★
+          </div>
+
+          <p>
+            “Qualidade absurda pelo preço.”
+          </p>
+
+          <h4>Felipe Rocha</h4>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- OFERTA -->
+
+  <section>
+
+    <div class="container">
+
+      <div class="offer-box">
+
+        <h2>OFERTA ESPECIAL</h2>
+
+        <div class="old-price">
+          De R$ 239,90
+        </div>
+
+        <div class="new-price">
+          R$ 139,90
+        </div>
+
+        <p style="margin-bottom:30px;font-size:1.2rem;">
+
+          Frete grátis para todo o Brasil.
+
+        </p>
+
+        <a
+        class="btn"
+        style="background:#000;box-shadow:none;"
+        href="https://pay.kaiross.com.br/iqE8DOFIg9wX"
+        target="_blank">
+
         COMPRAR COM DESCONTO
-      </a>
+
+        </a>
+
+      </div>
 
     </div>
 
-  </div>
-</section>
+  </section>
 
-<footer>
-  <div class="container">
-    © 2026 - Todos os direitos reservados.
-  </div>
-</footer>
+  <!-- RODAPÉ -->
+
+  <footer>
+
+    <div class="container">
+
+      © 2026 - Todos os direitos reservados.
+
+    </div>
+
+  </footer>
 
 </body>
 </html>
-```
